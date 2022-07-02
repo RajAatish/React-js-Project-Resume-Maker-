@@ -1,4 +1,6 @@
-
+.test{
+  color: #c3c7ce;
+}
 .brand2{
   color: #247881;
 }
@@ -52,29 +54,19 @@
 }
 /* Navigation */
 .icon-size{
-  font-size: 40px;
-}
-.navigation li {
-  display: inline-block;
-    padding: 10px 5px;
-    padding-right: 30px;
-    text-align: center;
-}
-.navigation{
-  text-align: right;
-  padding-right: 100px;
-  background-color: rgb(241, 241, 241);
+  font-size: 300%;
+
 }
 .navigation-item{
   color: #41bac3;
-  font-size: 40px;
   text-decoration: none;
 }
-.navigation-item-ex{
-  position: absolute;
-  left: 40px;
-  top: 20px
+
+.navigation-item:hover{
+  font-size: 18px;
+  
 }
+
 .active{
   color: rgb(225, 145, 145);
 }
@@ -97,6 +89,15 @@
   width: 250px;
   text-align: center;
 }
+.resume-input{
+  border-color: #a2a7cb;
+  border-style: hidden;
+  border-radius: 10px;
+  height: 40px;
+  background-color: #ecedf3;
+  width: 100%;
+  text-align: center;
+}
 .new-main-input-box{
   background-color: #8D8DAA;
   border-radius: 35px;
@@ -115,7 +116,7 @@
 .resume-bg{
   background-color: #ecedf3;
   padding-top: 25px;
-  border-radius: 30px;
+  /* border-radius: 30px; */
   
 }
 .left-resume{
@@ -123,6 +124,12 @@
   color: #DFDFDE;
   margin-bottom: 25px;
   border-radius: 30px;
+}
+.left-resume-two{
+  background-color: #222223;
+  color: #DFDFDE;
+  margin-bottom: 25px;
+  
 }
 
 .person-icon{
@@ -181,7 +188,7 @@
   margin-left: 30px;
 }
 .email{
-  width: 500px;
+  width: 90%;
   height: 65px;
   /* border: 3px solid rgb(95, 92, 92); */
   border-radius: 10px;
@@ -239,22 +246,17 @@
   
 }
 /* Blog Page */
-.container-icon{
- 
-
-  background-color: #d5d5e0;
-}
 .ind-icon{
   color: #091353;
   background-color: #b1cfd2;
-  font-size: 290px;
- margin: 50px 50px 50px 50px;
+  font-size: 200px;
+ margin: 50px 20px 50px 50px;
  padding: 30px 30px;
  border-radius: 25px;
 
 }
 .tech-icon{
-  font-size: 290px;
+  font-size: 200px;
   margin: 50px 20px 50px 50px;
   padding: 30px 30px;
   background-color: #c2bde6;
@@ -262,7 +264,7 @@
   border-radius: 25px;
 }
 .business-icon{
-  font-size: 290px;
+  font-size: 200px;
   margin: 50px 20px 50px 50px;
   padding: 30px 30px;
   background-color: #bee6bd;
@@ -270,7 +272,7 @@
   border-radius: 25px;
 }
 .entertainment-icon{
-  font-size: 290px;
+  font-size: 200px;
   margin: 50px 20px 50px 50px;
   padding: 30px 30px;
   background-color: #bde4e6;
@@ -278,7 +280,7 @@
   border-radius: 25px;
 }
 .general-icon{
-  font-size: 290px;
+  font-size: 200px;
   margin: 50px 20px 50px 50px;
   padding: 30px 30px;
   background-color: #e6bdca;
@@ -286,7 +288,7 @@
   border-radius: 25px;
 }
 .helth-icon{
-  font-size: 290px;
+  font-size: 200px;
   margin: 50px 20px 50px 50px;
   padding: 30px 30px;
   background-color: #dba5ea;
@@ -294,7 +296,7 @@
   border-radius: 25px;
 }
 .science-icon{
-  font-size: 290px;
+  font-size: 200px;
   margin: 50px 20px 50px 50px;
   padding: 30px 30px;
   background-color: #acdba4;
@@ -302,7 +304,7 @@
   border-radius: 25px;
 }
 .sports-icon{
-  font-size: 290px;
+  font-size: 200px;
   margin: 50px 20px 50px 50px;
   padding: 30px 30px;
   background-color: #3f5152;
@@ -310,7 +312,7 @@
   border-radius: 25px;
 }
 .python-icon{
-  font-size: 290px;
+  font-size: 200px;
   margin: 50px 20px 50px 50px;
   padding: 30px 30px;
   background-color: #80560e;
@@ -318,7 +320,7 @@
   border-radius: 25px;
 }
 .react-icon{
-  font-size: 290px;
+  font-size: 200px;
   margin: 50px 20px 50px 50px;
   padding: 30px 30px;
   background-color: #134504;
@@ -326,7 +328,7 @@
   border-radius: 25px;
 }
 .java-icon{
-  font-size: 290px;
+  font-size: 200px;
   margin: 50px 20px 50px 50px;
   padding: 30px 30px;
   background-color: #0d6a6e;
@@ -334,7 +336,7 @@
   border-radius: 25px;
 }
 .node-icon{
-  font-size: 290px;
+  font-size: 200px;
   margin: 50px 20px 50px 50px;
   padding: 30px 30px;
   background-color: #e7bdbd;
@@ -342,7 +344,7 @@
   border-radius: 25px;
 }
 .ai-icon{
-  font-size: 290px;
+  font-size: 200px;
   margin: 50px 20px 50px 50px;
   padding: 30px 30px;
   background-color: #ecd0af;
@@ -350,7 +352,7 @@
   border-radius: 25px;
 }
 .ml-icon{
-  font-size: 290px;
+  font-size: 200px;
   margin: 50px 20px 50px 50px;
   padding: 30px 30px;
   background-color: #a4a47d;
@@ -358,7 +360,7 @@
   border-radius: 25px;
 }
 .full-stack-icon{
-  font-size: 290px;
+  font-size: 200px;
   margin: 50px 20px 50px 50px;
   padding: 30px 30px;
   background-color: #1c484a;
@@ -366,7 +368,7 @@
   border-radius: 25px;
 }
 .mern-icon{
-  font-size: 290px;
+  font-size: 200px;
   margin: 50px 20px 50px 50px;
   padding: 30px 30px;
   background-color: #788f77;
@@ -374,7 +376,7 @@
   border-radius: 25px;
 }
 .cyber-secqurity-icon{
-  font-size: 290px;
+  font-size: 200px;
   margin: 50px 20px 50px 50px;
   padding: 30px 30px;
   background-color: #39898d;
@@ -400,7 +402,7 @@
 } */
 /* Image Gallery */
 .img-serch-input{
-  width: 300px;
+  width: 100%;
   height: 50px;
   border-radius: 25px;
   border: hidden;
@@ -409,11 +411,11 @@
   background-color: #e0f0f0;
 }
 .img-serch-btn{
-  height: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 10px;
+  
+  padding: 12px 50px 12px 50px;
+  border-radius: 29px;
   border: none;
+  color: darkgray;
   background-color: #0d6a6e;
 }
 .img-tags{
@@ -437,4 +439,144 @@
   margin-top: 19px;
   margin-left: 10px;
   color: #ea6375;
+}
+
+/* Start Stop Watch */
+.start{
+  padding: 30px;
+  background-color: #2ebcc1;
+  color: #fff;
+  border-radius: 50%;
+ 
+  border: hidden;
+}
+.start:disabled{
+  background-color: #91dbdd;
+}
+.stop{
+  padding: 30px;
+  background-color: #8d7151;
+  color: #fff;
+  border-radius: 80%;
+ 
+  border: hidden;
+}
+.reset{
+  padding: 30px;
+  background-color: #4eb15a;
+  color: #fff;
+  border-radius: 50%;
+ 
+  border: hidden;
+}
+.watch-color{
+  color: #08316e;
+  font-size: 550%;
+}
+/* Resume */
+ /* @media all and (max-width: 1200px) {
+  .resume-media{
+    
+    display: none;
+  }
+} */
+/* First Home Page */
+.the-best-way{
+  color: #08316e;
+  font-size: 400%;
+  font-weight: 600;
+  line-height: 100%;
+  font-family:'Courier New', Courier, monospace
+}
+.try-for-free{
+  background-color: darkgray;
+  text-align: center;
+  padding: 20px;
+  border-radius: 30px;
+  margin-left: 10px;
+}
+/* Secomd Home Page */
+.value-of-feature{
+  font-size: 300%;
+  color: #08316e;
+}
+.circle{
+  background-color: rgb(202, 194, 194);
+  padding: 15px;
+  text-align: center;
+  border-radius: 100%;
+  margin: 20px;
+  font-size: 10px;
+}
+.circle-2{
+  background-color: rgb(194, 198, 202);
+  padding: 15px;
+  text-align: center;
+  border-radius: 100%;
+  margin: 20px;
+  font-size: 10px;
+}
+.circle-text{
+  color: #0d6a6e;
+  font-size: 80%;
+}
+.circle-text-2{
+  color: #1c484a;
+  padding-top: 20px;
+}
+.download-your-resume{
+  padding: 10px;
+  background-color: #1c484a;
+  text-align: center;
+  color: #c3c6da;
+  border-radius: 50px;
+
+}
+/* Crousel */
+
+.team-member{
+  font-size: 30px;
+  font-weight: 300;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #247881;
+}
+
+/* Footer */
+.footer-text{
+  color: rgb(121, 121, 123);
+  text-decoration: none;
+  
+}
+.privacy-text{
+  color: #08316e;
+  background-color: rgb(169, 162, 162);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 30px 10px 10px
+  
+  
+}
+.cancel-btn{
+  background-color: rgb(147, 70, 70);
+  padding: 10px 50px 10px 50px;
+  border: hidden;
+  border-radius: 30px;
+}
+/* Contact Us */
+.send-feedback{
+  font-size: 150%;
+  color: #0d6a6e;
+}
+/* Image Input */
+.profile-pic{
+ color: #08316e;
+  
+}
+
+/* Resume Temp Three */
+.resume-temp-2-background{
+  background-color: #a8b4c6;
+}
+.resume-temp-3-background{
+  background-color: #9bacc6;
 }

@@ -4,6 +4,7 @@ import {BsLink} from "react-icons/bs"
 import {FaHeart} from "react-icons/fa"
 import {GrClose} from "react-icons/gr"
 
+
 const MainApi = (p) => {
   const [data, setData] = useState([]);
 
@@ -24,12 +25,7 @@ const MainApi = (p) => {
   console.log(data);
 
   return (
-    <>
-      
-       
-      
-     
-      
+    <>  
           
       <Row>
       <a onClick={() => {p.data(true)}} className="pt-5 close-btn center"> <GrClose /></a>
@@ -42,7 +38,7 @@ const MainApi = (p) => {
                   {/* img col */}
                  <Col> <img src={key.urlToImage} style={{ width: 500 }} /></Col>
                  {/* text content col */}
-                 <Col>
+                 <Col style={{textAlign:"left"}} >
                  <Row><Col className="source-text">{key.source.name}</Col></Row>
                  <Row className=" title-text"><Col>{key.title}</Col></Row>
                  <Row className="description-text mt-3"><Col>{key.description}</Col></Row>

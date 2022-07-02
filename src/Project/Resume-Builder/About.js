@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import Navigation from "../Navigation/Navigation";
 import "./Style.css";
 import { FaFacebookSquare } from "react-icons/fa";
@@ -17,7 +17,7 @@ const About = () => {
       <Row>
         <Col className="about-background mt-3 ">
           <Row className="pt-3">
-          <Row><img style={{width:200 , borderRadius: 500}} src={Aatish} /> </Row>
+          <Row><img style={{width:200 , borderRadius: 500}} alt="aatish" src={Aatish} /> </Row>
             <Row> Name - Aatish</Row>
             <Row>Contact Us:</Row>
             <Row>
@@ -42,7 +42,7 @@ const About = () => {
         </Col>
         <Col className="about-background-ritu mt-3">
             <Row className="pt-3">
-              <Row><img style={{width:200 , borderRadius: 100}} src={Ritu} /> </Row>
+              <Row><img style={{width:200 , borderRadius: 100}} alt="ritu" src={Ritu} /> </Row>
           <Row> Name - Ritu Kumari</Row>
           <Row>Contact Us:</Row>
           <Row>

@@ -10,34 +10,35 @@ import {
   MdScience,
   MdEmojiTransportation,
 } from "react-icons/md";
-import {SiPython} from "react-icons/si"
+import { SiPython } from "react-icons/si";
 import { FcSportsMode } from "react-icons/fc";
-import {GrReactjs} from "react-icons/gr"
-import {BsStack} from "react-icons/bs"
-import {SiMongodb} from "react-icons/si"
-import {GiCyberEye} from "react-icons/gi"
-import {GiBattleMech} from "react-icons/gi"
-import {GiArtificialIntelligence} from "react-icons/gi"
-import {SiNodedotjs} from "react-icons/si"
-import {FaJava} from "react-icons/fa"
-import IndiaApi from "./IndiaApi";
-import TechApi from "./TechApi";
-import BusinessApi from "./BusinessApi";
-import EntertainmentApi from "./EntertainmentApi";
-import GeneralApi from "./GeneralApi";
-import HelthApi from "./HelthApi";
-import ScienceApi from "./ScienceApi";
-import SportsApi from "./SportsApi";
-import MernApi from "./MernApi";
-import CyberSecqurityApi from "./CyberSecqurityApi";
-import MlApi from "./MlApi";
-import AiApi from "./AiApi";
-import FullStackApi from "./FullStackApi";
-import NodeApi from "./NodeJsApi";
-import JavaApi from "./JavaApi";
-import ReactApi from "./ReactApi";
-import PythonApi from "./PythonApi";
+import { GrReactjs } from "react-icons/gr";
+import { BsStack } from "react-icons/bs";
+import { SiMongodb } from "react-icons/si";
+import { GiCyberEye } from "react-icons/gi";
+import { GiBattleMech } from "react-icons/gi";
+import { GiArtificialIntelligence } from "react-icons/gi";
+import { SiNodedotjs } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
+// import IndiaApi from "./IndiaApi";
+// import TechApi from "./TechApi";
+// import BusinessApi from "./BusinessApi";
+// import EntertainmentApi from "./EntertainmentApi";
+// import GeneralApi from "./GeneralApi";
+// import HelthApi from "./HelthApi";
+// import ScienceApi from "./ScienceApi";
+// import SportsApi from "./SportsApi";
+// import MernApi from "./MernApi";
+// import CyberSecqurityApi from "./CyberSecqurityApi";
+// import MlApi from "./MlApi";
+// import AiApi from "./AiApi";
+// import FullStackApi from "./FullStackApi";
+// import NodeApi from "./NodeJsApi";
+// import JavaApi from "./JavaApi";
+// import ReactApi from "./ReactApi";
+// import PythonApi from "./PythonApi";
 import MainApi from "./MainApi";
+import Maintenence from "../Image/maintenance-page.jpg"
 
 const Blog = () => {
   const [ind, setInd] = useState(true);
@@ -57,31 +58,43 @@ const Blog = () => {
   const [fullStack, setFullStack] = useState(true);
   const [mern, setMern] = useState(true);
   const [cyberSecqurity, setCyberSecqurity] = useState(true);
-  const[car , setCar] = useState(true)
+  // const [car, setCar] = useState(true);
 
   return (
     <>
       <Row>
         <Navigation />
       </Row>
-      <div className=" mt-3 mb-3 container-icon">
-        {/* India Api */}
-        {ind ? (
+      <Container>
+        <Row>
+          <Col style={{color:"#FCF8E8" , textAlign:"center" , backgroundColor:"#774360" , padding: 10 }} >
+         Currently this page is under maintenence stage.
+          </Col>
+        </Row>
+      </Container>
+      <Container fluid style={{backgroundColor: "#d5d5e0"}} className=" center mt-2 mb-3">
+        {/* <Row>
+          <Col lg={4}></Col>
+          <Col lg={4}></Col>
+          <Col lg={4}></Col>
+        </Row> */}
+
+
          
-            
-          <button className="button-icon">
-            <GiIndianPalace
-              onClick={() => {
-                setInd(false);
-              }}
-              className="ind-icon"
-            />
-          <p>India</p>
-          </button>
-       
-        ) : (
-          <IndiaApi data={setInd} />
-        )}
+            {/* India Api */}
+            {ind ? (
+              <button className="button-icon">
+                <GiIndianPalace
+                  onClick={() => {
+                    setInd(false);
+                  }}
+                  className="ind-icon"
+                />
+                <p>India</p>
+              </button>
+            ) : (
+              <MainApi url="india" data={setInd} />
+            )}
         {/* Tech Api */}
         {tech ? (
           <button className="button-icon">
@@ -94,9 +107,9 @@ const Blog = () => {
             <p>Technology</p>
           </button>
         ) : (
-          <TechApi data={setTech} />
+          <MainApi url="india-technology" data={setTech} />
         )}
-        {/* Business Api */}
+            {/* Business Api */}
         {business ? (
           <button className="button-icon">
             <MdEmojiTransportation
@@ -108,8 +121,13 @@ const Blog = () => {
             <p>Business</p>
           </button>
         ) : (
-          <BusinessApi data={setBusiness} />
+          <MainApi url="india-business" data={setBusiness} />
         )}
+         
+       
+
+        
+        
         {/* Enteraintment Api */}
         {entertainment ? (
           <button className="button-icon">
@@ -122,7 +140,7 @@ const Blog = () => {
             <p>Bollywood</p>
           </button>
         ) : (
-          <EntertainmentApi data={setEntertainment} />
+          <MainApi url="bollywod" data={setEntertainment} />
         )}
         {/* General Api */}
 
@@ -137,7 +155,7 @@ const Blog = () => {
             <p>General</p>
           </button>
         ) : (
-          <GeneralApi data={setGeneral} />
+          <MainApi url="general" data={setGeneral} />
         )}
         {/* Helth Api */}
         {helth ? (
@@ -151,7 +169,7 @@ const Blog = () => {
             <p>Helth</p>
           </button>
         ) : (
-          <HelthApi data={setHelth} />
+          <MainApi url="helth" data={setHelth} />
         )}
         {/* Science */}
         {science ? (
@@ -165,7 +183,7 @@ const Blog = () => {
             <p>Science</p>
           </button>
         ) : (
-          <ScienceApi data={setScience} />
+          <MainApi url="science" data={setScience} />
         )}
         {/* Sports */}
         {soprts ? (
@@ -179,11 +197,13 @@ const Blog = () => {
             <p>Sports</p>
           </button>
         ) : (
-          <SportsApi data={setSports} />
+          <MainApi url="sports" data={setSports} />
         )}
 
         {/* Programming Langauge */}
-        <div className="mt-5 mt-3 center" style={{fontSize:60}}>Codding World </div>
+        <div className="mt-5 mt-3 center" style={{ fontSize: 60 }}>
+          Codding World{" "}
+        </div>
         <hr />
         {/* Python */}
         {python ? (
@@ -311,23 +331,10 @@ const Blog = () => {
         ) : (
           <MainApi url="mern" data={setMern} />
         )}
-        {/* car api */}
-        {car ? (
-          <button className="button-icon">
-            <SiMongodb
-              onClick={() => {
-                setCar(false);
-              }}
-              className="mern-icon"
-            />
-            <p>Cars</p>
-          </button>
-        ) : (
-          <MainApi url="car" data={setCar} />
-        )}
        
-      </div>
-    
+       
+      </Container>
+
       <Row>
         <Footer />
       </Row>

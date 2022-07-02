@@ -1,91 +1,171 @@
-import React, { useState } from "react";
-import { Row, Col, Button } from "react-bootstrap";
-import Resume from "../Image/Resume.png"
-
+import React, { useState, useEffect } from "react";
+import { Row, Col, Container } from "react-bootstrap";
+import Resume_Maker_Ui from "../Image/Resum-Maker-UI.png";
+import Resume_Logo from "../Image/Resume.png";
+import emailjs from "emailjs-com";
+import { useHistory } from "react-router-dom";
 const Sinup = (props) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [reminder, setReminder] = useState(false);
+  let history = useHistory();
+ 
+    // storing input name
+    localStorage.setItem("name", JSON.stringify(name));
+    localStorage.setItem("email", JSON.stringify(email));
+// Email Js Function 
+  function send(e) {
+    e.preventDefault();
+    if (name.length <= 2 || email.length <= 10) {
+      setReminder(true);
+    } else {
+      emailjs
+        .sendForm(
+          "service_e24pwon",
+          "template_mxpej9g",
+          e.target,
+          "h8n8oNMkUvVmJIbRE"
+        )
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      console.log("message send");
+      // localStorage.setItem("name" , JSON.stringify(name))
 
-    const [count2 , setCount2] = useState(false);
-    const [name , setName] = useState("")
-    const [password , setPassword] = useState("")
-   
-    console.log(name , password);
+      // props.p(true)
+      history.push("/home");
+      props.data(name);
+    }
+  }
   return (
     <>
-      <Row className="bg-sinup2">
-        <Col></Col>
-        {/* Login Page */}
-        <Col className="bg-sinup mt-5 mb-5 pb-5">
-          <Row className="red center mt-4">
-            <img src={Resume} style={{width:300, marginLeft:110}} />
-          </Row>
-          <h1 className="mt-5 mb-3 ml-5 ">Login Page</h1>
-          <input
-            type="text"
-            placeholder="Username"
-            className="email mt-2 mb-3 ml-4 mr-4"
-            onChange={(e) => {props.data(e.target.value)}}
-            nameData={name}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            className="email mb-3 ml-4 mr-4"
-            onChange={(e) => {setPassword(e.target.value)}}
-          />
-         
-          <Row>
-            <Col className="subbmit-align">
-              <Button
-                onClick={() => {
-                  props.p(true);
-                }}
-                variant="outline-secondary"
-              >
-                Subbmit
-              </Button>
-            </Col>
+      {/* Register Code */}
 
-            {/* Forgoat Part */}
-            {!count2 ? (
-              <Col className="forgoat-align">
-                <Button
-                  onClick={() => {
-                    setCount2(true);
-                  }}
-                  variant="outline-secondary"
+      <Container>
+        <Row>
+          {/* First Column */}
+          <Col lg={6} className="mb-5">
+            <Container>
+              <Row>
+                <Col
+                  className="mt-4 mb-4 center"
+                  style={{ fontSize: 20, color: "#c3c7ce" }}
                 >
-                  Forgoat
-                </Button>
-              </Col>
-            ) : (
-              <Row className="mt-5 cantainer">
-                <h1>Forgoat Password</h1>
-                <input
-                  type="email"
-                  placeholder="Enter Your Register Email"
-                  className="email ml-5"
-                />
-                <Col>
-                  <button
-                    onClick={() => {
-                      setCount2(false);
-                    }}
-                    className="btn btn-dark center mt-3"
-                  >
-                    Subbmit
-                  </button>
+                  Free Software{" "}
                 </Col>
               </Row>
-            )}
-          </Row>
-        </Col>
-        <Col></Col>
-      </Row>
-      <Row className="hide-acount">
-      
-      
-      </Row>
+              <Row className="mt-4">
+                <Col style={{ fontSize: "100%", color: "#3c5e86" }}>
+                  Create You Resume
+                </Col>
+              </Row>
+              <Row>
+                <Col ls={12}>
+                  {" "}
+                  <img
+                    style={{ width: "90%" }}
+                    src={Resume_Maker_Ui}
+                    alt="eg-pic"
+                  />
+                </Col>
+              </Row>
+              <Row className="mt-3">
+                <Col xs={11} style={{ color: "#3c5e86", fontSize: 17 }}>
+                  Generate your resume with few and simple steps. You have need
+                  only your personal information don't worry about the format.
+                </Col>
+              </Row>
+              <Row className="mt-3">
+                <Col xs={11} style={{ color: "darkred", fontSize: 17 }}>
+                  Note: Software doesn't work on mobile view port
+                </Col>
+              </Row>
+            </Container>
+          </Col>
+          {/* Second Column */}
+          <Col lg={6} className="mt-5 mb-5">
+            <Container
+              className="mt-5 pt-5 pb-5"
+              style={{ backgroundColor: "#f3f3f3", borderRadius: 25 }}
+            >
+              <Row>
+                <Col>
+                  {/* Logo */}
+                  <Row className="pb-5">
+                    <Col className="center">
+                      <img
+                        src={Resume_Logo}
+                        alt="logo"
+                        style={{ width: "80%", borderRadius: 25 }}
+                      />
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col style={{ fontSize: "200%", color: "#3c5e86" }}>
+                      Register
+                    </Col>
+                  </Row>
+                  {/* Reminder */}
+                  <Row className="mt-2">
+                    <Col style={{ color: "darkred" }}>
+                      {reminder
+                        ? "Hey... You can not register with empty field"
+                        : ""}
+                    </Col>
+                  </Row>
+                  {/* Email Input */}
+                  <form onSubmit={send}>
+                    <Row className="pt-3">
+                      <Col>
+                        <input
+                          name="name"
+                          value={name}
+                          onChange={(e) => {
+                            setName(e.target.value);
+                          }}
+                          type="text"
+                          className="email"
+                          placeholder="Name"
+                        />
+                      </Col>
+                    </Row>
+                    {/* Password Input */}
+                    <Row className="pt-2">
+                      <Col>
+                        <input
+                          name="email"
+                          value={email}
+                          onChange={(e) => {
+                            setEmail(e.target.value);
+                          }}
+                          type="email"
+                          className="email"
+                          placeholder="Email"
+                        />
+                      </Col>
+                    </Row>
+                    {/* Register Btn */}
+                    <Row className="pt-4 center">
+                      <Col xs={7}>
+                        <button
+                          style={{ backgroundColor: "#8D8DAA" }}
+                          className="form-control"
+                        >
+                          Register
+                        </button>
+                      </Col>
+                    </Row>
+                  </form>
+                </Col>
+              </Row>
+            </Container>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 };
-export default Sinup
+export default Sinup;

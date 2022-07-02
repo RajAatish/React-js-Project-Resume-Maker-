@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { BsPersonCircle } from "react-icons/bs";
 import { MdPhone } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
 import { ImMan } from "react-icons/im";
@@ -9,39 +8,41 @@ import { BiCodeAlt } from "react-icons/bi";
 import { FaLanguage } from "react-icons/fa";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
+import AatishTwo from "../Image/Aatish3.jpg"
 
 const Resume = () => {
-  const [nameValue, setNameValue] = useState("");
-  const [collageName, setCollageName] = useState("");
-  const [country, setCountry] = useState("");
-  const [state, setState] = useState("");
-  const [dist, setDist] = useState("");
-  const [pinCode, setPinCode] = useState("");
-  const [workExperience, setWorkExperience] = useState("");
-  const [certification, setCertification] = useState("");
-  const [software, setSoftware] = useState("");
-  const [projectLink, setProjectLink] = useState("");
-  const [gitRepo, setGitRepo] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [gender, setGender] = useState("");
-  const [lng, setLng] = useState("");
-  const [location, setLocation] = useState("");
-  const [skill, setSkill] = useState("");
-  
+  const [nameValue, setNameValue] = useState("Aatish");
+  const [collageName, setCollageName] = useState("G. P. Purnea");
+  const [country, setCountry] = useState("India");
+  const [state, setState] = useState("Bihar");
+  const [dist, setDist] = useState("Purnea");
+  const [pinCode, setPinCode] = useState("666666");
+  const [workExperience, setWorkExperience] = useState("Fresher");
+  const [certification, setCertification] = useState("Diploma in Computer Scirnce");
+  const [software, setSoftware] = useState("C , Python");
+  const [projectLink, setProjectLink] = useState("https://resumemaker-aatish.netlify.app/#/");
+  const [gitRepo, setGitRepo] = useState("https://github.com/RajAatish?tab=repositories");
+  const [phone, setPhone] = useState("9999999999");
+  const [email, setEmail] = useState("aatish@gmail.com");
+  const [gender, setGender] = useState("Male");
+  const [lng, setLng] = useState("English");
+  const [location, setLocation] = useState("Purnia");
+  const [skill, setSkill] = useState("React Js");
+  const [img , setImg] = useState(AatishTwo)
+
   // Name Value function
   // function NameValueFun(e) {
   //   setNameValue(e.target.value);
   // }
  function print()
  {
-  const input = document.getElementById("data");
+  const input = document.getElementById("resume-data-1");
   html2canvas(input).then((canvas) => {
     const imgData = canvas.toDataURL("image/png");
     const pdf = new jsPDF();
-    pdf.addImage(imgData, "JPEG", -8, 8 );
+    pdf.addImage(imgData, "JPEG", -8, -7 );
     // pdf.output('dataurlnewwindow');
-    pdf.save("resume.pdf");
+    pdf.save(nameValue+"-resume.pdf");
   });
  }
   
@@ -50,7 +51,7 @@ const Resume = () => {
     
     <>
       {/* Main Div */}
-      <Container className="main-style mt-5 mb-5">
+      <Container className="resume-media main-style mt-5 mb-5">
         {/* Start coDe */}
         <Row>
           {/* 1st Column */}
@@ -58,6 +59,18 @@ const Resume = () => {
             <Row className="mt-4 mb-4">
               {/* Personal Detail column  */}
               <Col>
+              {/* Image Input */}
+              <Row className="mb-3">
+                <label>Upload Resume Image</label>
+                  <input
+                    accept="image/*"
+                    placeholder="Upload Your Image"
+                    className="profile-pic mt-2"
+                    type="file"
+                    id="select-image"
+                    onChange={(e) => {setImg(URL.createObjectURL(e.target.files[0]))}}
+                  />
+                </Row>
                 <Row>
                   <label>
                     <input
@@ -193,7 +206,9 @@ const Resume = () => {
                   </label>
                 </Row>
                 <Row className="mt-2">
+                  
                   <label>
+                    
                     <input
                       type="text"
                       placeholder="Key Skills"
@@ -284,15 +299,16 @@ const Resume = () => {
             </Row>
           </Col>
           {/* 2d Column*/}
-          <Col id="data" xs={6} className="mt-3 mb-3 ml-3 mr-3">
+          <Col id="resume-data-1" xs={6} className="mt-3 mb-3 pb-4">
 
             <Container className="resume-bg">
             <Row className="">
               {/* Left Column of Resume */}
               <Col xs={6}>
-                <Container className="left-resume pt-5 pb-5">
+                <Container className="left-resume pt-3 pb-5">
                 
-                <BsPersonCircle className="person-icon" />
+                {/* Image Render */}
+                <Row><Col className="center"><img src={img} alt="image" style={{ width: "100%" , borderRadius:100 }} /></Col></Row>
                   <hr className="left-hr" />
                   <h5 className="mb-4"> Contact Me</h5>
                   <p style={{marginLeft:10}}>
@@ -320,6 +336,7 @@ const Resume = () => {
                     {location}
                   </p>
                   <hr />
+                  <p>Key Skill</p>
                   <p>
                     <BiCodeAlt className="skill-icon" />
                     {skill}
@@ -328,9 +345,10 @@ const Resume = () => {
                 </Container>
               </Col>
                   {/* Right Column of Resume */}
-              <Col xs={6} className=" right-resume p-5">
+              <Col xs={6} className=" right-resume pt-2">
                    {/* Right Resume */}
                 <h4>{nameValue} </h4>
+                <h6>Collage Name</h6>
                 <p> {collageName}</p>
                 <hr />
                 <h6>Residential Address</h6>
@@ -342,13 +360,13 @@ const Resume = () => {
                 <p>{workExperience}</p>
                 <p>{certification}</p>
                 <hr />
-                <h5>Software Skill</h5>
+                <h5> Skill</h5>
                 <p>{software}</p>
                 <hr />
-                <h5>Project Link</h5>
+                <h5>Project </h5>
                 <p>{projectLink}</p>
                 <hr />
-                <h5>Git-Repository</h5>
+                <h5>Git Repository</h5>
                 <p>{gitRepo}</p>
                 <hr />
               </Col>
