@@ -50,17 +50,12 @@ const Sinup = (props) => {
           <Col lg={6} className="mb-5">
             <Container>
               <Row>
-                <Col
-                  className="mt-4 mb-4 center"
-                  style={{ fontSize: 20, color: "#c3c7ce" }}
-                >
-                  Free Software{" "}
-                </Col>
+                <Col style={{color:"darkgray"}}>Free Software</Col>
               </Row>
-              <Row className="mt-4">
+              <Row className="mt-5 mb-5 center">
                 
                 <Col className="the-best-way ">
-                Create Your Resume Like Pro !
+                Create Your Resume Like Pro..!
               </Col>
               </Row>
               <Row>
