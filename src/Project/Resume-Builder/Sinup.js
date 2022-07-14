@@ -58,9 +58,10 @@ const Sinup = (props) => {
                 </Col>
               </Row>
               <Row className="mt-4">
-                <Col style={{ fontSize: "100%", color: "#3c5e86" }}>
-                  Create You Resume
-                </Col>
+                
+                <Col className="the-best-way ">
+                Create Your Resume Like Pro !
+              </Col>
               </Row>
               <Row>
                 <Col ls={12}>
@@ -79,16 +80,16 @@ const Sinup = (props) => {
                 </Col>
               </Row>
               <Row className="mt-3">
-                <Col xs={11} style={{ color: "darkred", fontSize: 17 }}>
+                <Col xs={11} style={{ color: "#EEC4C4", fontSize: 17 }}>
                   Note: Software doesn't work on mobile view port
                 </Col>
               </Row>
             </Container>
           </Col>
           {/* Second Column */}
-          <Col lg={6} className="mt-5 mb-5">
+          <Col lg={6} className=" mb-5">
             <Container
-              className="mt-5 pt-5 pb-5"
+              className="mt-4 pt-5 pb-5"
               style={{ backgroundColor: "#f3f3f3", borderRadius: 25 }}
             >
               <Row>
@@ -105,7 +106,7 @@ const Sinup = (props) => {
                   </Row>
                   <Row>
                     <Col style={{ fontSize: "200%", color: "#3c5e86" }}>
-                      Register
+                      Sign Up
                     </Col>
                   </Row>
                   {/* Reminder */}
@@ -154,7 +155,7 @@ const Sinup = (props) => {
                           style={{ backgroundColor: "#8D8DAA" }}
                           className="form-control"
                         >
-                          Register
+                          Sign Up
                         </button>
                       </Col>
                     </Row>

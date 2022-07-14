@@ -482,6 +482,13 @@
 } */
 /* First Home Page */
 .the-best-way{
+  color: #8D8DAA;
+  font-size: 400%;
+  font-weight: 600;
+  line-height: 100%;
+  font-family:'Courier New', Courier, monospace
+}
+.the-best-way2{
   color: #08316e;
   font-size: 400%;
   font-weight: 600;
