@@ -53,7 +53,7 @@ const GetApi = () => {
       <Container style={{ hight: 500 }} className="center">
         <Row className="mt-5">
           <Col>
-            <Row className="center"><h3>Start Stop Watch</h3> </Row>
+            <Row className="center"><h3 style={{color: "darkolivegreen"}}>Start Stop Watch</h3> </Row>
             <Row className="mt-2 center">
               <h1 className="watch-color">{watch}</h1>
             </Row>

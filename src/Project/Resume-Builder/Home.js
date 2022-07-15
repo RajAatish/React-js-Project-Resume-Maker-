@@ -27,7 +27,7 @@ const Home = () => {
         {/* First Home Row */}
         <Row >
           {/* First Column */}
-          <Col lg={5} style={{ marginLeft: 20 }} className="mt-5">
+          <Col lg={5} style={{ marginLeft: 20 }} className="mt-1">
             <Row className="mt-2">
               <Col style={{ color: "darkgray" }}>Free Software</Col>
             </Row>
