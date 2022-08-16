@@ -267,7 +267,7 @@ const Home = () => {
                     </Row>
                   </Carousel.Item>
                   {/* Second Slide */}
-                  <Carousel.Item interval={3000}>
+                  {/* <Carousel.Item interval={3000}>
                     <img
                       className="d-block center"
                       src={Ritu}
@@ -286,7 +286,7 @@ const Home = () => {
                         </p>
                       </Col>
                     </Row>
-                  </Carousel.Item>
+                  </Carousel.Item> */}
                 </Carousel>
               </Col>
               {/* <Col xs={2}></Col> */}
