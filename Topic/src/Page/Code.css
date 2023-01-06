@@ -1,0 +1,62 @@
+.center{
+    text-align: center;
+}
+.MapWithProps2{
+    padding: 15px;
+    background: #666;
+    color: white;
+    line-height: 2;
+}
+hr{
+    color: rgb(226, 46, 46);
+    font-size: 5px;
+}
+.navbar-class li {
+    display: inline-block;
+    padding: 10px 5px;
+    padding-right: 30px;
+
+}
+.navbar-class{
+   text-align: right;
+   padding-right: 100px;
+}
+.navlink-class{
+    color: #666;
+    font-size: 30px;
+  text-decoration: none;
+}
+.active{
+    color: blueviolet;
+}
+.navlink-class:hover{
+    color: aquamarine;
+}
+.add-to-cart{
+    padding: 20px;
+    text-align: left;
+    margin-left: 40px;
+    border-top: #695b5b;
+}
+.phone-img img{
+    width: 200px;
+}
+.cart-text{
+    padding: 9px;
+    width: 160px;
+    color: #675a55;
+    font-size: 20px;
+}
+.cart-btn button{
+    padding: 10px;
+    margin-left: 10px;
+    background-color: #695b5b;
+    color: #fff;
+    border: none;
+}
+.cart-img img{
+    width: 150px;
+    position: absolute;
+    left: 1000px;
+    top: 10px;
+}
