@@ -4,8 +4,8 @@ import Resume_Maker_Ui from "../Image/Resum-Maker-UI.png";
 import Resume_Feture from "../Image/Resume-fetures.jpg";
 import Resume_Talk from "../Image/Resume-Talk.jpg";
 import Aatish from "../Image/Aatish.png";
-import Ritu from "../Image/Ritu.jpeg";
-import Ritesh_sir from "../Image/Ritesh_Sir.jpg";
+// import Ritu from "../Image/Ritu.jpeg";
+// import Ritesh_sir from "../Image/Ritesh_Sir.jpg";
 import Guru_sir from "../Image/Guru-Sir.jpg";
 
 const Home = () => {
@@ -32,7 +32,7 @@ const Home = () => {
               <Col style={{ color: "darkgray" }}>Free Software</Col>
             </Row>
             <Row>
-              <Col xs={10} className="the-best-way mt-4 mb-4">
+              <Col xs={10} className="the-best-way mt-3 mb-3">
                 The best way to creat your resume!
               </Col>
             </Row>
@@ -210,7 +210,7 @@ const Home = () => {
                       </Row>
                     </Carousel.Item>
                     {/* Second Slide */}
-                    <Carousel.Item interval={3000}>
+                    {/* <Carousel.Item interval={3000}>
                       <img
                         className="d-block center"
                         src={Ritesh_sir}
@@ -229,7 +229,7 @@ const Home = () => {
                           </p>
                         </Col>
                       </Row>
-                    </Carousel.Item>
+                    </Carousel.Item> */}
                   </Carousel>
                 </Col>
                 {/* <Col xs={2}></Col> */}
